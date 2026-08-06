@@ -280,3 +280,99 @@ footer {
   padding: 2.5rem;
   margin-top: auto;
 }
+
+/* ==============================================
+   DISEÑO ADAPTATIVO PARA CELULARES Y TABLETS
+   ============================================== */
+
+@media (max-width: 992px) {
+  
+  /* Ajuste de contenedores y texto */
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .main-container {
+    padding: 2rem 1rem;
+  }
+
+  .content-block {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajuste de menú para pantallas táctiles */
+  .nav-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-top: 1rem;
+    border-top: 1px solid var(--accent-light);
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  /* Submenús desplegados ordenadamente en móvil */
+  .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background-color: #f1f5f9;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .dropdown a {
+    padding: 0.6rem 1.5rem;
+  }
+
+  /* Hacemos que las tarjetas se apilen en 1 sola columna vertical */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  /* Apilamos el formulario de contacto */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Ajuste fino para teléfonos pequeños (< 480px) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
