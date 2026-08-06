@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech | Contacto Corporativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index1.html" class="logo">EcoTech <span>Solutions</span></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index1.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="energia.html" class="nav-link">Energía ▾</a></li>
+        <li class="nav-item"><a href="huella-digital.html" class="nav-link">Huella Digital ▾</a></li>
+        <li class="nav-item"><a href="reciclaje.html" class="nav-link">Reciclaje ▾</a></li>
+        <li class="nav-item"><a href="contacto.html" class="nav-link active">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>Hablemos de su Próximo Proyecto Verde</h1>
+    <p>Nuestros consultores están listos para analizar su infraestructura</p>
+  </div>
+
+  <main class="main-container">
+    <div class="content-block">
+      <div class="contact-grid">
+        
+        <div>
+          <h2>Información Corporativa</h2>
+          <p>Complete el formulario para solicitar una propuesta formal o agendar una reunión con nuestro equipo técnico.</p>
+          <br>
+          <p><strong>Oficina Central:</strong> Av. Tecnológica 1020, Edificio EcoCenter</p>
+          <p><strong>Teléfono Directo:</strong> +595 21 555 0199</p>
+          <p><strong>Correo Electrónico:</strong> proyectos@ecotech-solutions.org</p>
+          <p><strong>Atención:</strong> Lunes a Viernes de 08:00 a 18:00 hs</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Solicitud enviada correctamente. Un consultor se pondrá en contacto.');">
+          <div class="form-group">
+            <label for="empresa">Nombre de la Empresa / Cliente</label>
+            <input type="text" id="empresa" required placeholder="Ej. Innovaciones S.A.">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Corporativo</label>
+            <input type="email" id="email" required placeholder="ejemplo@empresa.com">
+          </div>
+          <div class="form-group">
+            <label for="servicio">Servicio de Interés</label>
+            <input type="text" id="servicio" placeholder="Energía, Huella Digital, Reciclaje...">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Detalles de la Consulta</label>
+            <textarea id="mensaje" rows="5" required placeholder="Describa brevemente el alcance de su proyecto..."></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%;">Enviar Propuesta</button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EcoTech Solutions S.A. | Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

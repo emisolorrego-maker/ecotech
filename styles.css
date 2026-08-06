@@ -1,0 +1,282 @@
+/* --- VARIABLES Y PALETA DE COLORES VIVA Y CORPORATIVA --- */
+:root {
+  --primary: #064e3b;          /* Verde bosque profundo */
+  --primary-medium: #047857;   /* Verde esmeralda */
+  --accent: #10b981;          /* Verde menta brillante */
+  --accent-light: #d1fae5;    /* Verde suave para destacar */
+  --bg-body: #f8fafc;         /* Fondo claro limpio */
+  --bg-card: #ffffff;         /* Blanco puro */
+  --text-main: #0f172a;       /* Gris oscuro para legibilidad */
+  --text-muted: #475569;      /* Gris medio */
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.05);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- NAVEGACIÓN Y MENÚ DESPLEGABLE --- */
+header {
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-medium);
+  background-color: var(--accent-light);
+}
+
+/* Submenús */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius);
+  min-width: 250px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  list-style: none;
+  padding: 0.8rem 0;
+  border: 1px solid var(--accent-light);
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown a {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown a:hover {
+  background-color: var(--accent-light);
+  color: var(--primary);
+  padding-left: 1.8rem;
+}
+
+/* --- COMPONENTES VISUALES --- */
+.hero {
+  background: linear-gradient(135deg, rgba(6,78,59,0.92), rgba(16,185,129,0.85)), 
+              url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80') center/cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.4);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-medium);
+  transform: translateY(-2px);
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-medium));
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  flex: 1;
+}
+
+/* Grillas y Tarjetas Extensas */
+.content-block {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+}
+
+.content-block h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+.card-body h3 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+/* Formularios Corporativos */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2.5rem;
+  margin-top: auto;
+}
